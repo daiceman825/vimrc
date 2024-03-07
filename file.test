@@ -1,0 +1,142 @@
+<F1>
+###########################################################################
+$ T99 = [[ 192.168.1.1
+
+<F2>
+Login/Vet Start:
+Vetting End    :
+Disconnect     :
+
+<F3>
+Login/Vet Start:
+Vetting End    :
+Survey Start   :
+Survey End     :
+Disconnect     :
+
+<F4>
+###########################################################################]]
+
+# fold markers are double square brakets
+
+[[
+
+fold test
+
+]]
+
+
+
+
+<F7>
+ssh -S /tmp/blue -O forward -L 9001:192.168.1.1:22
+
+<F8>
+ssh -MS /tmp/t1 -p 9001 username@localhost
+
+
+
+#comment
+"this is a quote"
+
+!! this is a warning
+!! warning! warning!
+
+this is regular text
+
+?? this is a question
+
+## this is a comment
+# this is a comment
+
+
+# the ipv6 highlight is kinda wonky
+192.168.1.1
+FF:FF:FF:FF:FF:FF
+fe80::1
+fe80:1234:5678::1
+
+0010.12.15.0000 # simulate version number
+1.01.56.99
+192.168.0.99
+255.255.255.255
+1.1.1.1.1.1.1
+300.300.300.300 # should not be highlighted.
+
+0:0:0:0:0:0 # simulate weird version number. should not be highlighted
+00:00:00:00:00:00
+11:11:11:11:11:11
+ff:ff:ff:ff:ff:ff
+AF:B6:90:CC:DE:AD
+gg:gg:gg:gg:gg:gg # should not be highlighted
+
+
+# kinda wonky but still works
+inet6 fe80::5e87:9cff:fec0:6728/64
+
+::1
+
+fe80::1
+
+
+<F5>
+1709829905 || UTC 2024-03-07-16:45:05
+1709829915 || UTC 2024-03-07-16:45:15
+1709830209 || UTC 2024-03-07-16:50:09
+
+
+# Ctrl-\ to duplicate lines (close enough to Ctrl-Enter to still have a good keyboard feel)
+
+duplicate this line!
+duplicate this line too!
+
+
+# Ctrl-Up / Ctrl-Down to move lines up and down
+
+blah
+blah blah
+qwerty
+yuiop
+asdfghjkl
+duplicate this line and put it at the top
+
+
+# Highlight format Linux process list outputs for: ps -elfH
+[[>>
+
+F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+1 S root           2       0  0  80   0 -     0 -      Zed99 ?        00:00:00 [kthreadd]
+1 I root           6       2  0  60 -20 -     0 -      Zed99 ?        00:00:00   [netns]
+1 I root         261       2  0  60 -20 -     0 -      Zed99 ?        00:00:00   [scsi_tmf_0]
+1 S root         262       2  0  80   0 -     0 -      Zed99 ?        00:00:00   [scsi_eh_1]
+1 I root         263       2  0  60 -20 -     0 -      Zed99 ?        00:00:00   [scsi_tmf_1]
+1 S root         264       2  0  80   0 -     0 -      Zed99 ?        00:00:00   [scsi_eh_2]
+1 I root         265       2  0  60 -20 -     0 -      Zed99 ?        00:00:00   [scsi_tmf_2]
+1 S root         266       2  0  80   0 -     0 -      Zed99 ?        00:00:00   [scsi_eh_3]
+1 I root         267       2  0  60 -20 -     0 -      Zed99 ?        00:00:00   [scsi_tmf_3]
+4 S root           1       0  0  80   0 -     0 -      Zed99 ?        00:00:20 /sbin/init splash
+4 S root         350       1  0  79  -1 -     0 -      Zed99 ?        00:02:54   /lib/systemd/systemd-journald
+4 S root         384       1  0  80   0 -     0 -      Zed99 ?        00:00:02   /lib/systemd/systemd-udevd
+4 S systemd+     706       1  0  80   0 -     0 -      Zed99 ?        00:00:06   /lib/systemd/systemd-resolved
+4 S systemd+     707       1  0  80   0 -     0 -      Zed99 ?        00:00:01   /lib/systemd/systemd-timesyncd
+
+<<]]
+
+
+
+# Highlight format Linux process list outputs for: ss -autnp
+
+[[::
+
+
+Netid           State            Recv-Q           Send-Q                            Local-Address:Port                         Peer-Address:Port          Process
+udp             UNCONN           0                0                                 127.0.0.53%lo:53                                0.0.0.0:* 
+tcp             ESTAB            0                0                                 192.168.0.1:65535                       10.0.0.1:443            users:(("firefox",pid=xxxx,fd=xx))
+tcp             ESTAB            0                0                                 192.168.0.1:65535                       10.0.0.1:443            users:(("firefox",pid=xxxx,fd=xx))
+
+::]]
+
+
+
+
+
