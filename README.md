@@ -15,3 +15,14 @@ File.test contains demos of all the functionality of the vimrc
 
 ### Relevant Links
 https://vimways.org/2018/from-vimrc-to-vim/
+
+### HOTKEYS
+```
+F5 - Timestamp (Epoch || UTC) 
+F1 - Header                   F4 - Footer 
+F2 - Timestamp Block          F3 - Timestamp Block w/ Survey 
+F7 - SSH Forward command      F8 - SSH Command 
+
+Comments : !!, ??, #, ##, //
+Format Blocks : [[>> ps -elfH <<]] , [[:: ss -autnp ::]] 
+```
